@@ -15,8 +15,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
         features = "src/main/java/Features",
         glue = {"stepDefinations"},
         dryRun=false,
-        format = {
-                "pretty",
+        format = {"pretty",
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"

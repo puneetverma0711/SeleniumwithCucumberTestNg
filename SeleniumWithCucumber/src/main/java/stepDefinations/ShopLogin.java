@@ -7,7 +7,9 @@ import org.apache.logging.log4j.core.util.Assert;
 import com.shop.Base.ShopBase;
 import com.shop.Pages.ShopDashboardPage;
 import com.shop.Pages.ShopLoginPage;
+import com.shop.Util.ShopUtilities;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -43,7 +45,7 @@ public class ShopLogin extends ShopBase {
 	public void user_is_on_shopclues_dashboardpage() throws Throwable {
 		String dashbaordtext=shoploginpage.dashboardwelcometext();
 		String a[]=dashbaordtext.split(" ");
-		assertEquals(a[0], "Hi"); 
+		ShopUtilities.verify(a[0],ShopUtilities.DASHBOARD_Text);
 	}
 
 	@Then("^user close the browser$")

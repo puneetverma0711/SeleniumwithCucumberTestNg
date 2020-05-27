@@ -35,7 +35,7 @@ public class ShopLoginPage extends ShopBase  {
 	
 	
 	public ShopLoginPage() {
-		PageFactory.initElements(ShopBase.driver, this);		
+		PageFactory.initElements(driver, this);		
 	}
 	
 	
