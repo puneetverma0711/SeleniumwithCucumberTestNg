@@ -65,7 +65,6 @@ public static Wait<WebDriver> wait;
 driver.manage().window().maximize();
 driver.manage().deleteAllCookies();
 driver.manage().timeouts().pageLoadTimeout(ShopUtilities.PAGELOAD_TIMEOUT, TimeUnit.SECONDS);
-driver.manage().timeouts().implicitlyWait(ShopUtilities.IMPLICITWAIT_TIMEOUT, TimeUnit.SECONDS);
 driver.get(resb.getString("url")); 
 
 	

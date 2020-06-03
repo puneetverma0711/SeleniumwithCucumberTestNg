@@ -12,7 +12,7 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
-        features = "src/main/java/Features",
+        features = "src/main/java/Features/productlist.feature",
         glue = {"stepDefinations"},
         dryRun=false,
         format = {"pretty",

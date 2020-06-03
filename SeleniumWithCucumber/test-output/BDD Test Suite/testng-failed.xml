@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" thread-count="1" parallel="tests" name="Failed suite [BDD Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.shop.analyzer.MyShopAnalyzerTransform"/>
+  </listeners>
+  <test thread-count="1" parallel="tests" name="Shop Clues Test(failed)">
+    <classes>
+      <class name="myRunner.TestRunner">
+        <methods>
+          <include name="feature" invocation-numbers="0 1 1 1"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- myRunner.TestRunner -->
+    </classes>
+  </test> <!-- Shop Clues Test(failed) -->
+</suite> <!-- Failed suite [BDD Test Suite] -->

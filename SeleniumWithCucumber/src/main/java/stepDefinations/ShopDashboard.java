@@ -5,7 +5,7 @@ import static org.testng.Assert.assertEquals;
 import com.shop.Base.ShopBase;
 import com.shop.Pages.ShopDashboardPage;
 import com.shop.Pages.ShopLoginPage;
-import com.shop.Pages.ShopProductPage;
+import com.shop.Pages.ShopProductListPage;
 import com.shop.Util.ShopUtilities;
 
 import cucumber.api.java.After;
@@ -15,7 +15,7 @@ import cucumber.api.java.en.Then;
 public class ShopDashboard extends ShopBase {
 ShopLoginPage loginpage;
 ShopDashboardPage dashboardpage;
-ShopProductPage productpage;	
+ShopProductListPage productpage;	
 	
 	@Given("^user is on dashbaord page$")
 	public void user_is_on_dashbaord_page() throws Throwable {
@@ -29,7 +29,7 @@ ShopProductPage productpage;
 	@Then("^user type \"([^\"]*)\" into the search field$")
 	public void user_type_into_the_search_field(String searchdata) throws Throwable {
 		 Thread.sleep(5000);
-		dashboardpage.searchText(searchdata);
+		dashboardpage.searchText(ShopUtilities.searchdata);
 	}
 	
 	

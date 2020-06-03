@@ -24,9 +24,9 @@ public class ShopDashboardPage extends ShopBase {
 		ShopUtilities.enter(driver, searchbox, 15);
 	}
 	
-	public ShopProductPage hitenteronsearchfield() {
+	public ShopProductListPage hitenteronsearchfield() {
 		ShopUtilities.enter(driver, searchbox, 15);
-		return new ShopProductPage();
+		return new ShopProductListPage();
 	}
 	
 	public String verifyproductpage() {
