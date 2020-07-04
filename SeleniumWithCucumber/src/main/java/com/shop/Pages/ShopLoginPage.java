@@ -46,9 +46,10 @@ public class ShopLoginPage extends ShopBase  {
 		
 	}
 	
+	 
 	
-	
-	public  ShopDashboardPage login(String un, String pass) {
+	public  ShopDashboardPage login(String un, String pass) throws InterruptedException {
+		Thread.sleep(5000);
 		ShopUtilities.sendkeys(driver, username, 20, un);
 		ShopUtilities.sendkeys(driver, password, 20, pass);
 		ShopUtilities.click(driver, loginbtn);  

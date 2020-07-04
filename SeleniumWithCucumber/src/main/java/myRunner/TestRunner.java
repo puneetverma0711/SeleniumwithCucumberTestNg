@@ -15,6 +15,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
         features = "src/main/java/Features/productlist.feature",
         glue = {"stepDefinations"},
         dryRun=false,
+        tags= {"~@smoke","~@regression"},
         format = {"pretty",
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",

@@ -16,7 +16,8 @@ public class ShopProductListPage extends ShopBase {
 	@FindBy(xpath="//h2")  
 	static List<WebElement> products;
 	
-	
+	@FindBy(xpath="//span[@class='p_price']")    
+	static List<WebElement> productsprice;
 	
 	
 	public ShopProductListPage() {
@@ -26,16 +27,26 @@ public class ShopProductListPage extends ShopBase {
 	
 	
 	public static List<WebElement>  getmobileproducts() {
-		List<WebElement> productlist=products;
-		return productlist;
+	
+		return products;
+		
+	}
+	
+	
+	public static List<WebElement>  getmobileproductsprice() {
+		
+		return productsprice;
 		
 	}
 	
 	
 	public static String getproductName(WebElement product) {	
 		return product.getText();
-		
-		
+	
 	}
+	
+	
+	
+	
 	
 }

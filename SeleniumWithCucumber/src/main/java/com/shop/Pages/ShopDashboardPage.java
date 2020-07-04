@@ -19,7 +19,8 @@ public class ShopDashboardPage extends ShopBase {
 	}
 	
 	
-	public void searchText(String searchdata) {
+	public void searchText(String searchdata) throws InterruptedException {
+		Thread.sleep(4000);   
 		ShopUtilities.sendkeys(driver, searchbox, 15, searchdata);
 		ShopUtilities.enter(driver, searchbox, 15);
 	}

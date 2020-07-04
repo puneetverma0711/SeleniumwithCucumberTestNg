@@ -22,13 +22,12 @@ ShopProductListPage productpage;
 	    ShopBase.initialization();
 	   loginpage=new ShopLoginPage(); 
 	   loginpage.clickonsignbutton();
-	   Thread.sleep(5000);
 	    dashboardpage=loginpage.login(ShopBase.resb.getString("username"), ShopBase.resb.getString("password")); 
 	}
 
 	@Then("^user type \"([^\"]*)\" into the search field$")
 	public void user_type_into_the_search_field(String searchdata) throws Throwable {
-		 Thread.sleep(5000);
+		// Thread.sleep(5000);
 		dashboardpage.searchText(ShopUtilities.searchdata);
 	}
 	
